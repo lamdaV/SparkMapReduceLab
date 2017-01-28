@@ -11,4 +11,4 @@ To work through this lab, please clone the repo. To do so on the command line, e
     $ git clone https://github.com/lamdaV/SparkMapReduceLab.git
   ```
 
-Once the project has been cloned, read through the `introduction` and work through its example. With the `introduction` read and the example worked through, attempt to work on the `friendsListTask`.
+Once the project has been cloned, read through the [introduction](https://github.com/lamdaV/SparkMapReduceLab/blob/master/introduction/README.md) and work through its example. With the [introduction](https://github.com/lamdaV/SparkMapReduceLab/blob/master/introduction/README.md) read and the example worked through, attempt to work on the [friendsListTask](https://github.com/lamdaV/SparkMapReduceLab/blob/master/friendsListTask/README.md).
