@@ -1,19 +1,19 @@
 # MapReduce with Spark:
 
 ## Table Of Content:
-  1. [Objective](#Objective) 
-  2. [Requirements](#Requirements)
-  3. [Background](#Background)
-     a. [Initialization](#Initialization)
-     b. [Resilient Distributed Datasets](#Resilient Distributed Datasets)
-     c. [Operations](#Operations)
-  4. [Example](#Example)
-     a. [Loading Data](#Loading Data)
-     b. [Mapping Phase](#Mapping Phase)
-     c. [Reduce Phase](#Reduce Phase)
-     d. [Saving Data](#Saving Data)
-     e. [Submitting a Job](#Submitting a Job)
-  
+  1. [Objective](#objective)  
+  2. [Requirements](#requirements)  
+  3. [Background](#background)  
+     a. [Initialization](#initialization)  
+     b. [Resilient Distributed Datasets](#Resilient Distributed Datasets)  
+     c. [Operations](#operations)  
+  4. [Example](#Example)  
+     a. [Loading Data](#loading Data)  
+     b. [Mapping Phase](#mapping Phase)  
+     c. [Reduce Phase](#reduce Phase)  
+     d. [Saving Data](#saving Data)  
+     e. [Submitting a Job](#submitting a Job)  
+   
 ## Objective
 From this introduction, a student should begin to understand how to translate their understanding of Hadoop’s MapReduce framework to Spark’s MapReduce Framework. Once completed, the student will have an adequate amount of understanding of Spark’s MapReduce framework.
 
