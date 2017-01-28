@@ -1,5 +1,20 @@
 # MapReduce with Spark:
-## Objective:
+
+## Table Of Content:
+  1. [Objective](#Objective) 
+  2. [Requirements](#Requirements)
+  3. [Background](#Background)
+     a. [Initialization](#Initialization)
+     b. [Resilient Distributed Datasets](#Resilient Distributed Datasets)
+     c. [Operations](#Operations)
+  4. [Example](#Example)
+     a. [Loading Data](#Loading Data)
+     b. [Mapping Phase](#Mapping Phase)
+     c. [Reduce Phase](#Reduce Phase)
+     d. [Saving Data](#Saving Data)
+     e. [Submitting a Job](#Submitting a Job)
+  
+## Objective
 From this introduction, a student should begin to understand how to translate their understanding of Hadoop’s MapReduce framework to Spark’s MapReduce Framework. Once completed, the student will have an adequate amount of understanding of Spark’s MapReduce framework.
 
 ## Requirements
@@ -7,8 +22,8 @@ From this introduction, a student should begin to understand how to translate th
 - Minimal Knowledge of Python
 - PySpark
 
-## Background:
-### Initialization:
+## Background
+### Initialization
 Before we dive into the code, we must first understand how Spark is structured. To use Spark, we must import the SparkContext object. The SparkContext object requires a SparkConf object. In python, it looks like this:
 
 ```python
@@ -39,8 +54,8 @@ There are two broad categories on RDDs: transformations and actions. A transform
 
 By default, each transformation may require Spark to recompute the same transformed RDD. If that is the case, then there is a `persist` or `cache`. These commands are the same and will store the transformed RDD in memory for another call.
 
-## Example:
-### Loading data:
+## Example
+### Loading Data
 We will be working with `temperatureSample.txt` from the first day of class. To load data:
 ```python
   # Import SparkContext.
@@ -61,7 +76,7 @@ That is, it. If we wanted to check what is in `temperature_data`, we could run t
   temperature_data.collect()
 ```
 
-### Mapping Phase:
+### Mapping Phase
 Now that data is loaded, we need to a mapper to extract what we really care about: the year and temperature. To do so, we will create a python local function.
 ```python
   def temperature_mapper(line):
@@ -90,7 +105,7 @@ With the mapping function define, we can pass its reference like so:
 ```
 Now every entry of `temperatures` will be a tuple of `(year, temperature)`.
 
-### Reduce Phase:
+### Reduce Phase
 Suppose we want to get the max, min, and average temperature for each year. Our data so far looks something like this: `[(1950, 11), (1949, 13), (1950, 83)]`. We can then call the `reduceByKey` method. This function is similar to how a combiner works in Hadoop's MapReduce framework. That is, the mapper will perform some minor reduction of the results to send it off to the reducer. In this case, we can have use this method to merge the results of the year to compute our max and min temperatures.
 
 ```python
@@ -113,7 +128,7 @@ Unfortunately, averages are a bit more complicated than the clean one-liners we 
   avg_temperature = avg_temperature.mapValues(lambda value: value[0] / value[1])
  ```
 
- ### Saving Data:
+ ### Saving Data
  Now that we have data, the next question is how do we save it. This process is not handled automatically like how Hadoop's MapReduce framework would. Fortunately, the command is as simple as the previous commands were. Here is how you would get it done:
 
 ```Python
@@ -121,7 +136,7 @@ Unfortunately, averages are a bit more complicated than the clean one-liners we 
 ```
  Please note that there are many other variations of the `saveAs` command such as `saveAsHadoopDataset`. Refer to the API docs for me information.
 
-### Submitting a Job:
+### Submitting a Job
 To submit a job in Spark, we need to invoke the versatile Spark submission tool `spark-submit`. This tool takes a variety of optional parameters; however, for what we are interested in, we need to specify, `--master yarn`. This will run the Spark Job off of the `yarn` cluster setup. To submit the job then, all we need to do is this:
 
 ```
