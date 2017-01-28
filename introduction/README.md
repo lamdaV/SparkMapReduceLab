@@ -5,14 +5,14 @@
   2. [Requirements](#requirements)  
   3. [Background](#background)  
      a. [Initialization](#initialization)  
-     b. [Resilient Distributed Datasets](#Resilient Distributed Datasets)  
+     b. [Resilient Distributed Datasets](#resilient-distributed-datasets)  
      c. [Operations](#operations)  
-  4. [Example](#Example)  
-     a. [Loading Data](#loading Data)  
-     b. [Mapping Phase](#mapping Phase)  
-     c. [Reduce Phase](#reduce Phase)  
-     d. [Saving Data](#saving Data)  
-     e. [Submitting a Job](#submitting a Job)  
+  4. [Example](#example)  
+     a. [Loading Data](#loading-data)  
+     b. [Mapping Phase](#mapping-phase)  
+     c. [Reduce Phase](#reduce-phase)  
+     d. [Saving Data](#saving-data)  
+     e. [Submitting a Job](#submitting-a-job)  
    
 ## Objective
 From this introduction, a student should begin to understand how to translate their understanding of Hadoop’s MapReduce framework to Spark’s MapReduce Framework. Once completed, the student will have an adequate amount of understanding of Spark’s MapReduce framework.
