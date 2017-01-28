@@ -128,7 +128,7 @@ Unfortunately, averages are a bit more complicated than the clean one-liners we 
   avg_temperature = avg_temperature.mapValues(lambda value: value[0] / value[1])
  ```
 
- ### Saving Data
+### Saving Data
  Now that we have data, the next question is how do we save it. This process is not handled automatically like how Hadoop's MapReduce framework would. Fortunately, the command is as simple as the previous commands were. Here is how you would get it done:
 
 ```Python
