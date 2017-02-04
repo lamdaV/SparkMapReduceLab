@@ -1,6 +1,6 @@
 # PySpark MapReduce Lab:
 
-## Friends List Revisited:
+## Friends List:
 Suppose you are running a social network and you want to compute a batch process at the end of every day to find the friends A and B have in common. Your data looks like this:
 ```
   A,B,C,D       // A has friends B, C, D
