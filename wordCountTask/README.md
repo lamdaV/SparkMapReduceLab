@@ -16,7 +16,7 @@ Suppose you are given a large text file and you want to know how many times each
 
 Your task is to write a PySpark script in which it will compute word count according to the formentioned criteria.
 
-For this task, a sample text file called [ffxvSummary]() has been provided for you in this directory. Along with this sample text file, there is also an [expectedWordCount]() file provided. It is not expected that there is a single output; however, you can use this expected file to check your results.
+For this task, a sample text file called [ffxvSummary](https://github.com/lamdaV/SparkMapReduceLab/blob/master/wordCountTask/ffxvSummary.txt) has been provided for you in this directory. Along with this sample text file, there is also an [expectedWordCount](https://github.com/lamdaV/SparkMapReduceLab/blob/master/wordCountTask/expectedWordCount.txt) file provided. It is not expected that there is a single output; however, you can use this expected file to check your results.
 
 Please consult with the API docs [here](https://spark.apache.org/docs/2.1.0/api/python/pyspark.html).
 
