@@ -14,6 +14,8 @@ Your task is to write a PySpark script in which it will compute the friends in c
 
 For simplicity, you may also assume that if A has B as a friend, B also has A as a friend.
 
+Please consult with the API docs [here](https://spark.apache.org/docs/2.1.0/api/python/pyspark.html).
+
 ## Hints
   - It may be helpful to run multiple map task on the same input.
   - Define local functions rather than lambdas.

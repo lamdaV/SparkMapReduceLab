@@ -18,6 +18,8 @@ Your task is to write a PySpark script in which it will compute word count accor
 
 For this task, a sample text file called [ffxvSummary]() has been provided for you in this directory. Along with this sample text file, there is also an [expectedWordCount]() file provided. It is not expected that there is a single output; however, you can use this expected file to check your results.
 
+Please consult with the API docs [here](https://spark.apache.org/docs/2.1.0/api/python/pyspark.html).
+
 ## Hints
   - The RDD operation `flatMap` may be useful.
   - The RDD operation `sortBy` may be useful.
