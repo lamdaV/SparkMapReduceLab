@@ -1,6 +1,6 @@
-# PySpark MapReduce Lab:
+# PySpark MapReduce Friends List Task
 
-## Friends List:
+## Friends List
 Suppose you are running a social network and you want to compute a batch process at the end of every day to find the friends A and B have in common. Your data looks like this:
 ```
   A,B,C,D       // A has friends B, C, D
@@ -14,7 +14,7 @@ Your task is to write a PySpark script in which it will compute the friends in c
 
 For simplicity, you may also assume that if A has B as a friend, B also has A as a friend.
 
-## Hints:
+## Hints
   - It may be helpful to run multiple map task on the same input.
   - Define local functions rather than lambdas.
   - Work with tuples rather than lists.
