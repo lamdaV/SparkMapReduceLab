@@ -133,7 +133,7 @@ That is, it. If we wanted to check what is in `temperature_data`, we could run t
 ```
 
 ### Mapping Phase
-Now that data is loaded, we need to a mapper to extract what we really care about: the year and temperature. To do so, we will create a python local function.
+Now that data is loaded, we need to a mapper to extract what we really care about: the year and temperature. To do so, we will create a Python local function.
 ```python
   def temperature_mapper(line):
     # This is very similar to the first day's Java code with Python list comprehension.
@@ -187,7 +187,7 @@ Unfortunately, averages are a bit more complicated than the clean one-liners we 
 ### Saving Data
  Now that we have data, the next question is how do we save it. This process is not handled automatically like how Hadoop's MapReduce framework would. Fortunately, the command is as simple as the previous commands were. Here is how you would get it done:
 
-```Python
+```python
   min_temperature = min_temperature.saveAstextFile("hdfs:///tmp/output")
 ```
  Please note that there are many other variations of the `saveAs` command such as `saveAsHadoopDataset`. Refer to the API docs for me information.
@@ -199,6 +199,6 @@ To submit a job in Spark, we need to invoke the versatile Spark submission tool 
   $ spark-submit --master yarn temperature.py
 ```
 
-Please note that `spark-submit` cluster parameter is incompatible with python files as of right now.
+Please note that `spark-submit` cluster parameter is incompatible with Python files as of right now.
 
 For more information on the pyspark API go [here](https://spark.apache.org/docs/2.1.0/api/python/pyspark.html).
