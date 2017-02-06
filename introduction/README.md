@@ -1,21 +1,21 @@
 # MapReduce with Spark:
 
 ## Table Of Content:
-  1. [Objective](#objective)
-  2. [Requirements](#requirements)
-  3. [Installation](#installation)
-  4. [What is Spark?](#what-is-spark)
-  5. [Who and What is Spark Used For?](#who-and-what-is-spark-used-for)
-  6. [Background](#background)
-     a. [Initialization](#initialization)
-     b. [Resilient Distributed Datasets](#resilient-distributed-datasets)
-     c. [Operations](#operations)
-  7. [Example](#example)
-     a. [Loading Data](#loading-data)
-     b. [Mapping Phase](#mapping-phase)
-     c. [Reduce Phase](#reduce-phase)
-     d. [Saving Data](#saving-data)
-     e. [Submitting a Job](#submitting-a-job)
+  1. [Objective](#objective)  
+  2. [Requirements](#requirements)  
+  3. [Installation](#installation)  
+  4. [What is Spark?](#what-is-spark)  
+  5. [Who and What is Spark Used For?](#who-and-what-is-spark-used-for)  
+  6. [Background](#background)  
+     a. [Initialization](#initialization)  
+     b. [Resilient Distributed Datasets](#resilient-distributed-datasets)  
+     c. [Operations](#operations)  
+  7. [Example](#example)  
+     a. [Loading Data](#loading-data)  
+     b. [Mapping Phase](#mapping-phase)  
+     c. [Reduce Phase](#reduce-phase)  
+     d. [Saving Data](#saving-data)  
+     e. [Submitting a Job](#submitting-a-job)  
 
 ## Objective
 From this introduction, a student should begin to understand how to translate their understanding of Hadoop’s MapReduce framework to Spark’s MapReduce Framework. Once completed, the student will have an adequate amount of understanding of Spark’s MapReduce framework.
