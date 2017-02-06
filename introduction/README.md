@@ -1,19 +1,22 @@
 # MapReduce with Spark:
 
 ## Table Of Content:
-  1. [Objective](#objective)  
-  2. [Requirements](#requirements)  
-  3. [Background](#background)  
-     a. [Initialization](#initialization)  
-     b. [Resilient Distributed Datasets](#resilient-distributed-datasets)  
-     c. [Operations](#operations)  
-  4. [Example](#example)  
-     a. [Loading Data](#loading-data)  
-     b. [Mapping Phase](#mapping-phase)  
-     c. [Reduce Phase](#reduce-phase)  
-     d. [Saving Data](#saving-data)  
-     e. [Submitting a Job](#submitting-a-job)  
-   
+  1. [Objective](#objective)
+  2. [Requirements](#requirements)
+  3. [Installation](#installation)
+  4. [What is Spark?](#what-is-spark?)
+  5. [Who and What is Spark Used For?](#who-and-what-is-spark-used-for?)
+  4. [Background](#background)
+     a. [Initialization](#initialization)
+     b. [Resilient Distributed Datasets](#resilient-distributed-datasets)
+     c. [Operations](#operations)
+  5. [Example](#example)
+     a. [Loading Data](#loading-data)
+     b. [Mapping Phase](#mapping-phase)
+     c. [Reduce Phase](#reduce-phase)
+     d. [Saving Data](#saving-data)
+     e. [Submitting a Job](#submitting-a-job)
+
 ## Objective
 From this introduction, a student should begin to understand how to translate their understanding of Hadoop’s MapReduce framework to Spark’s MapReduce Framework. Once completed, the student will have an adequate amount of understanding of Spark’s MapReduce framework.
 
@@ -22,9 +25,62 @@ From this introduction, a student should begin to understand how to translate th
 - Minimal Knowledge of Python
 - PySpark
 
+## Installation
+PySpark comes standard with most Spark installation. If you have Ambari installed, both Spark and Spark2 can be installed via the Ambari Web UI.
+
+Otherwise, please ensure that Java 7+ is installed. To check if Java is installed, run the following command:
+```
+  $ java -version
+```
+If the command does not run, then Java is not installed. If the version outputted is not `1.7` or above, then please upgrade your Java version.
+
+We are now ready to install Spark. Download Spark [here](https://spark.apache.org/downloads.html) and extract the Spark tar file with the following command:
+```
+  $ tar xvf <spark.tar>
+```
+
+It is suggested that you move the Spark files from your downloads to some standard directory such as `/usr/local/spark`. You can do so by running the following command:
+```
+  cd <spark_download_location>
+  mv <spark_binary> /usr/local/spark
+```
+
+Now we need to update the `~/.bashrc` file by adding the path the Spark binary location. To do so, run the following command:
+```
+  export PATH = $PATH:/usr/local/spark/bin
+```
+
+Spark should now be installed. To verify the installation, run the command `pyspark`. You should get a Python REPL with Spark integration.
+
+Installation Adapted from [TutorialPoint](https://www.tutorialspoint.com/apache_spark/apache_spark_installation.htm)
+
+## What is Spark?
+On the Apache Spark homepage, Spark claims to be 100x faster than standard Hadoop than MapReduce when performing in-memory computations and 10x faster than Hadoop when performing on-disk computations.
+
+What does this mean? Spark, much like MapReduce, works by distrubuting data across a cluster and processes it parallel; however, unlike your standard MapReduce, most of the data processing occurs in-memory rather than on-disk.
+
+To achieve this, Spark internally maintains what is called Resilient Distributed Datasets (RDDs) which are read-only data stored on a cluster. The RDDs are stored on the cluster in a fault-tolerant. This new data structure was developed to overcome the MapReduce linear dataflow. That is, a typical MapReduce program will read data from disk, run the Map Phase, run the Reduce Phase, and store the Reduced results on disk. [More Information](https://www.usenix.org/system/files/conference/nsdi12/nsdi12-final138.pdf)
+
+Spark natively supports Java, Scala, Python, and R. Unlike Hadoop, Spark does not rely on a Streaming API to work with languages other than Java. Furthermore, Spark supports interactive shells for Scala, Python, and R.
+
+Similar to Hadoop, many powerful libraries utilizes Spark's computation engine to perform data analytics. These libraries include Spark SQL, Spark Streaming, MLlib (Machine Learning Library), and GraphX (Graphing Libarary).
+
+Lastly, Spark supports many different distributive computing setups such as Hadoop, HDFS, Cassandra, HBase, and Mesos.
+
+## Who and What is Spark Used For?
+  - eBay
+    - Spark Core for transaction logging, aggregation, and analytics
+  - VideoAmp
+    - Intelligent video ads targetting specific online and television viewers
+  - MyFitnessPal
+    - Clean-up user specified food data to identify high-quality food items
+    - Recommendation engine for recipes and foods.
+
+To see more, go [here](https://spark.apache.org/powered-by.html)
+
 ## Background
 ### Initialization
-Before we dive into the code, we must first understand how Spark is structured. To use Spark, we must import the SparkContext object. The SparkContext object requires a SparkConf object. In python, it looks like this:
+Before we dive into the code, we must first understand how Spark is structured. To use Spark, we must import the SparkContext object. The SparkContext object requires a SparkConf object. In Python, it looks like this:
 
 ```python
   from pyspark import SparkContext, SparkConf
