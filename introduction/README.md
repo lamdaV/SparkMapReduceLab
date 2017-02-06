@@ -7,9 +7,9 @@
 
   3. [Installation](#installation)
 
-  4. [What is Spark?](#what-is-spark?)
+  4. [What is Spark?](#what-is-spark)
 
-  5. [Who and What is Spark Used For?](#who-and-what-is-spark-used-for?)
+  5. [Who and What is Spark Used For?](#who-and-what-is-spark-used-for)
 
   6. [Background](#background)
 
@@ -20,7 +20,7 @@
      c. [Operations](#operations)
 
   7. [Example](#example)
-  
+
      a. [Loading Data](#loading-data)
 
      b. [Mapping Phase](#mapping-phase)
