@@ -1,21 +1,21 @@
 # MapReduce with Spark:
 
 ## Table Of Content:
-  1. [Objective](#objective)  
-  2. [Requirements](#requirements)  
-  3. [Installation](#installation)  
-  4. [What is Spark?](#what-is-spark)  
-  5. [Who and What is Spark Used For?](#who-and-what-is-spark-used-for)  
-  6. [Background](#background)  
-     a. [Initialization](#initialization)  
-     b. [Resilient Distributed Datasets](#resilient-distributed-datasets)  
-     c. [Operations](#operations)  
-  7. [Example](#example)  
-     a. [Loading Data](#loading-data)  
-     b. [Mapping Phase](#mapping-phase)  
-     c. [Reduce Phase](#reduce-phase)  
-     d. [Saving Data](#saving-data)  
-     e. [Submitting a Job](#submitting-a-job)  
+  1. [Objective](#objective)
+  2. [Requirements](#requirements)
+  3. [Installation](#installation)
+  4. [What is Spark?](#what-is-spark)
+  5. [Who and What is Spark Used For?](#who-and-what-is-spark-used-for)
+  6. [Background](#background)
+     a. [Initialization](#initialization)
+     b. [Resilient Distributed Datasets](#resilient-distributed-datasets)
+     c. [Operations](#operations)
+  7. [Example](#example)
+     a. [Loading Data](#loading-data)
+     b. [Mapping Phase](#mapping-phase)
+     c. [Reduce Phase](#reduce-phase)
+     d. [Saving Data](#saving-data)
+     e. [Submitting a Job](#submitting-a-job)
 
 ## Objective
 From this introduction, a student should begin to understand how to translate their understanding of Hadoop’s MapReduce framework to Spark’s MapReduce Framework. Once completed, the student will have an adequate amount of understanding of Spark’s MapReduce framework.
@@ -68,15 +68,25 @@ Similar to Hadoop, many powerful libraries utilizes Spark's computation engine t
 Lastly, Spark supports many different distributive computing setups such as Hadoop, HDFS, Cassandra, HBase, and Mesos.
 
 ## Who and What is Spark Used For?
-  - eBay
+  - [eBay](https://spark.apache.org/powered-by.html)
     - Spark Core for transaction logging, aggregation, and analytics
-  - VideoAmp
+  - [VideoAmp](https://spark.apache.org/powered-by.html)
     - Intelligent video ads targetting specific online and television viewers
-  - MyFitnessPal
+  - [MyFitnessPal](https://spark.apache.org/powered-by.html)
     - Clean-up user specified food data to identify high-quality food items
     - Recommendation engine for recipes and foods.
-
-To see more, go [here](https://spark.apache.org/powered-by.html)
+  - [IBM](http://www.ibmbigdatahub.com/blog/what-spark)
+    - IBM SPSS: Spark MLlib algorithms are invoked from IBM SPSS Modeler workflows
+    - IBM BigSQL: Spark is used to access data from HDFS, S3, HBase, and other NoSQL databases using IBM BigSQL. Spark RDD is returned to IBM BigSQL for processing.
+    - IBM InfoSphere Streams: Spark transformation, action, and MLlib functions can be added to existing Stream application for improved data analytics.
+    - IBM Cloudant: Spark analyzes data collected on IBM Bluemix.
+  - [Uber](https://www.qubole.com/blog/big-data/apache-spark-use-cases/)
+    - Spark is used with Kafka and HDFS in a continuous Extract, Transform, Load pipeline. Uber terabytes of raw userdata into structured data to perform more complicated analytics.
+  - [Pinterest](https://www.qubole.com/blog/big-data/apache-spark-use-cases/)
+    - Spark Streaming is leverage to perform real-time analytics on how users are engaging with Pins. This allows Pinterest to make relevant information navigating the site.
+  - [Yahoo](https://www.datanami.com/2014/03/06/apache_spark_3_real-world_use_cases/)
+    - Spark MLlib is used to customize Yahoo's homepage news feed for each user.
+    - Spark is also used with Hive to allow Yahoo to query advertisement user data for analytics.
 
 ## Background
 ### Initialization
